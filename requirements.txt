@@ -2,3 +2,4 @@ pandas
 skops
 scikit-learn
 matplotlib
+black
