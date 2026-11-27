@@ -11,18 +11,18 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import ConfusionMatrixDisplay, confusion_matrix
 
 # Baca data
-drug_df = pd.read_csv('Data/drug.csv')
+drug_df = pd.read_csv("Data/drug.csv")
 drug_df = drug_df.sample(frac=1)
 
 # split dataset
-X = drug_df.drop(columns=['Drug'])
-y = drug_df[['Drug']]
+X = drug_df.drop(columns=["Drug"])
+y = drug_df[["Drug"]]
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state=7)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=7)
 
 # Machine Learning pipelines
-cat_col = [1,2,3]
-num_col = [0,4]
+cat_col = [1, 2, 3]
+num_col = [0, 4]
 
 transform = ColumnTransformer(
     [
