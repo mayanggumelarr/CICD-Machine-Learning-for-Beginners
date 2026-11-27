@@ -12,9 +12,9 @@ eval:
 	echo "## Model Metrics" > report.md
 	cat ./Results/metrics.txt >> report.md
 	
-	echo '\n## Confusion Matrix Plot' > report.md
-	cat ./Results/model_results.png >> report.md
-	
+	echo "\n## Confusion Matrix Plot" >> report.md
+	echo "![Confusion Matrix](https://github.com/mayanggumelarr/CICD-Machine-Learning-for-Beginners/tree/main/Results/model_results.png)" >> report.md
+
 	cml comment create report.md
 		
 update-branch:
